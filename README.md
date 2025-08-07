@@ -3,9 +3,9 @@
 ## Show the total summary value in DateTime format
 You can implement your own summary aggregate functions using the [GridSummaryColumn.CustomAggregate](https://help.syncfusion.com/cr/windowsforms/Syncfusion.WinForms.DataGrid.GridSummaryColumn.html#Syncfusion_WinForms_DataGrid_GridSummaryColumn_CustomAggregate) property when built-in aggregate functions do not meet your requirement. The summary value can be calculated based on any custom logic.
 
-In the following example, the Time column of data grid displays time in minutes. The custom summary aggregate for the summary column is created to display the total time in HH:MM format.
+In the following example, the Time column of [WinForms DataGrid](https://www.syncfusion.com/winforms-ui-controls/datagrid) (SfDataGrid) displays time in minutes. The custom summary aggregate for the summary column is created to display the total time in HH:MM format.
 
-## C#  
+### C#  
 
 ```C#  
 
@@ -23,7 +23,7 @@ public Form2()
             new GridSummaryColumn()
             {
                 Name = "TotalTime",
-               CustomAggregate=new CustomSummary(),
+                CustomAggregate=new CustomSummary(),
                 SummaryType=SummaryType.Custom,
                 Format="Total time : {TotalHours}",
                 MappingName="Time in minutes"
@@ -60,7 +60,7 @@ public class CustomSummary : ISummaryAggregate
     }
 }
 ```
-## VB
+### VB
 
 ```VB
 
